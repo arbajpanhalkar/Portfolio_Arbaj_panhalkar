@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arbaj Panhalkar - Full Stack Developer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Arbaj Panhalkar - Professional Full Stack Developer Portfolio" name="description">
+    <meta content="web development, full stack developer, software engineer, portfolio, Arbaj Panhalkar" name="keywords">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ap-solutions-brand.css">
+    <style>
+        @media (max-width: 991px) {
+            .hero-image img {
+                width: 350px !important;
+                height: 350px !important;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero-image img {
+                width: 280px !important;
+                height: 280px !important;
+            }
+        }
+        
+        .top-bar {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        }
+        
+        .navbar-brand {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: translateY(-2px);
+        }
+
+        .brand-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .brand-name .text-primary {
+            color: #00a8ff !important;
+            text-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+        }
+
+        .brand-title {
+            font-size: 0.85rem;
+            color: #00a8ff;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: -2px;
+            opacity: 0.9;
+        }
+
+        .navbar-brand:hover .brand-name {
+            transform: scale(1.02);
+        }
+
+        .navbar-brand:hover .brand-title {
+            opacity: 1;
+        }
+
+        @media (max-width: 991px) {
+            .brand-name {
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+            }
+            .brand-title {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.7rem 1.2rem !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #007bff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 70%;
+        }
+        
+        .dropdown-menu-dark {
+            background: #2d3238;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dropdown-item {
+            padding: 0.7rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            transform: translateX(5px);
+            background: #3a4047;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .nav-link::after {
+                display: none;
+            }
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        /* Media Queries for Different Screen Sizes */
+        @media (max-width: 1200px) {
+            .profile-img {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .profile-img {
+                width: 300px;
+                height: 300px;
+                margin-top: 30px;
+            }
+            .hero-content {
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 250px;
+                height: 250px;
+                margin-top: 20px;
+                border-width: 3px;
+            }
+            .section-padding {
+                padding: 60px 0;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                margin-top: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .hero-content {
+                padding: 10px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .section-padding {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .profile-img {
+                width: 180px;
+                height: 180px;
+                border-width: 2px;
+            }
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .section-bg {
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            color: #2d3436;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: #007bff;
+            margin: 0 auto 40px;
+        }
+        
+        .about-content {
+            padding: 20px;
+        }
+        
+        .about-content h3 {
+            color: #2d3436;
+            font-weight: 600;
+        }
+        
+        .key-points {
+            margin: 25px 0;
+        }
+        
+        .point-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .point-item i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        
+        .about-box {
+            background: white;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .about-box i {
+            color: #007bff;
+        }
+        
+        .about-box h4 {
+            font-size: 1.2rem;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+        
+        .about-box p {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 0;
+        }
+        
+        .about-buttons {
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-box {
+                padding: 15px !important;
+            }
+            
+            .about-box h4 {
+                font-size: 1rem;
+            }
+            
+            .about-box p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .skill-header h4 {
+            color: #2d3436;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .skill-body {
+            padding: 10px 0;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-item span {
+            display: block;
+            margin-bottom: 8px;
+            color: #636e72;
+            font-weight: 500;
+        }
+
+        .progress {
+            height: 8px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(45deg, #007bff, #00e1ff);
+            transition: width 1s ease-in-out;
+        }
+
+        .skill-card:hover .progress-bar {
+            animation: progress-animation 1.5s ease-in-out;
+        }
+
+        @keyframes progress-animation {
+            0% {
+                width: 0%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skill-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .skill-icon {
+                font-size: 2rem;
+            }
+        }
+
+        .skills-container {
+            padding: 20px 0;
+        }
+
+        .hex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .hex-item {
+            width: 200px;
+            height: 230px;
+            position: relative;
+            margin: 15px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hex-content {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .hex-content i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .hex-content h4 {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .hex-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .hex-item:hover .hex-content {
+            background: linear-gradient(145deg, #007bff, #0056b3);
+        }
+
+        .hex-item:hover .hex-content i,
+        .hex-item:hover .hex-content h4,
+        .hex-item:hover .hex-content .skill-level {
+            color: white;
+        }
+
+        .hex-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #007bff, #00e1ff);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: -1;
+        }
+
+        .hex-item:hover:before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hex-item {
+                width: 150px;
+                height: 173px;
+                margin: 10px;
+            }
+
+            .hex-content i {
+                font-size: 2rem;
+            }
+
+            .hex-content h4 {
+                font-size: 1rem;
+            }
+
+            .skill-level {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hex-grid {
+                gap: 10px;
+            }
+
+            .hex-item {
+                width: 130px;
+                height: 150px;
+                margin: 5px;
+            }
+
+            .hex-content i {
+                font-size: 1.8rem;
+            }
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-item {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,123,255,0.9), rgba(0,225,255,0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .tech-stack span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            color: #2d3436;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .project-content p {
+            color: #636e72;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            color: #007bff;
+            background: rgba(0,123,255,0.1);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-btn i {
+            font-size: 1rem;
+        }
+
+        /* Hover Effects */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-btn:hover {
+            background: #007bff;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .project-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .project-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Project Header and Feature Styles */
+        .project-header {
+            background: linear-gradient(135deg, #007bff, #00e1ff);
+            color: white;
+            padding: 6rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/gym.jpg') center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .project-header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tech-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            backdrop-filter: blur(5px);
+            margin: 0.25rem;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #007bff, #00e1ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .screenshot {
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+            width: 100%;
+            height: auto;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .tech-details {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            position: relative;
+        }
+
+        .tech-details::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00e1ff);
+        }
+
+        .implementation-step {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .implementation-step:hover {
+            transform: translateX(10px);
+        }
+
+        .implementation-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #007bff, #00e1ff);
+        }
+
+        .demo-btn {
+            background: linear-gradient(135deg, #007bff, #00e1ff);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            border: none;
+        }
+
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,123,255,0.2);
+            color: white;
+        }
+
+        .demo-btn i {
+            transition: transform 0.3s ease;
+        }
+
+        .demo-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Blog Content Styles */
+        .blog-section {
+            padding: 4rem 0;
+            background: #ffffff;
+        }
+
+        .blog-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .blog-title {
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #007bff, #00e1ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            color: #636e72;
+            font-size: 0.95rem;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-meta-item i {
+            color: #007bff;
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .blog-image:hover {
+            transform: scale(1.02);
+        }
+
+        .blog-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2d3436;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2d3436;
+            margin: 3rem 0 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #007bff, #00e1ff);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .tech-stack-section {
+            background: #f8f9fa;
+            padding: 4rem 0;
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .tech-stack-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #007bff, #00e1ff);
+        }
+
+        .tech-stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .tech-name {
+            font-size: 1.2rem;
+            color: #2d3436;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .tech-description {
+            font-size: 0.9rem;
+            color: #636e72;
+            line-height: 1.6;
+        }
+
+        .gallery-section {
+            padding: 4rem 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,123,255,0.9), rgba(0,225,255,0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-caption {
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .blog-image {
+                height: 300px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stack-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="brand-content">
+                    <span class="brand-name"><span class="text-primary">AP</span> SOLUTIONS</span>
+                    <span class="brand-title">Innovation Through Technology</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <BR><BR>
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Gym Management System</h1>
+                    <p class="lead mb-4">A comprehensive solution for managing gym operations, member tracking, and fitness progress monitoring</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Bootstrap</span>
+                        <span class="tech-badge">jQuery</span>
+                    </div>
+                    <a href="#" class="demo-btn">
+                        <i class="fas fa-play-circle"></i>
+                        Live Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Member Management</h3>
+                        <p>Complete member profiles, attendance tracking, and membership plan management with automated renewals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Workout Tracking</h3>
+                        <p>Customizable workout plans, progress tracking, and performance analytics for each member.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Business Analytics</h3>
+                        <p>Comprehensive reporting system for membership trends, revenue analysis, and facility utilization.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="tech-details">
+        <div class="container">
+            <h2 class="text-center mb-5">Implementation Details</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="implementation-step text-center mb-5">
+                        <div class="ap-solutions-brand">
+                            <div class="ap-solutions-logo"></div>
+                            <h3 class="brand-tagline">AP SOLUTIONS</h3>
+                            <p class="innovation-text">Innovation Through Technology</p>
+                        </div>
+                    </div>
+                    <div class="implementation-step">
+                        <h4>Backend Architecture</h4>
+                        <p>Built with PHP 8.0 and MySQL, following MVC architecture for clean code organization and maintainability.</p>
+                    </div>
+                    <div class="implementation-step">
+                        <h4>Frontend Development</h4>
+                        <p>Responsive UI using Bootstrap 5 with custom SCSS, enhanced with jQuery for dynamic interactions.</p>
+                    </div>
+                    <div class="implementation-step">
+                        <h4>Code Learning & Development</h4>
+                        <p>The development process incorporated modern coding practices and continuous learning:</p>
+                        <ul>
+                            <li>Implementation of design patterns and best practices</li>
+                            <li>Version control with Git for efficient code management</li>
+                            <li>Code documentation and commenting for better maintainability</li>
+                            <li>Integration of modern development tools and frameworks</li>
+                            <li>Responsive design principles and mobile-first approach</li>
+                            <li>Performance optimization techniques</li>
+                        </ul>
+                    </div>
+                    <div class="implementation-step">
+                        <h4>Security Measures</h4>
+                        <p>Implemented JWT authentication, input sanitization, and prepared statements to prevent SQL injection.</p>
+                    </div>
+                    <div class="implementation-step">
+                        <h4>Performance Optimization</h4>
+                        <p>Utilized caching mechanisms and optimized database queries for faster response times.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Project Screenshots</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img src="gym-dashboard.jpg" alt="Dashboard" class="img-fluid screenshot">
+                </div>
+                <div class="col-md-6">
+                    <img src="gym-members.jpg" alt="Member Management" class="img-fluid screenshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 AP SOLUTIONS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

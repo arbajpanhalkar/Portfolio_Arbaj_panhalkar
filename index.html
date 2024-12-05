@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Arbaj Panhalkar - Full Stack Developer</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Arbaj Panhalkar - Professional Full Stack Developer Portfolio" name="description">
+    <meta content="web development, full stack developer, software engineer, portfolio, Arbaj Panhalkar" name="keywords">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(0,123,255,0.05) 0%, rgba(0,123,255,0) 100%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #2d3436 0%, #000000 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content h1 .text-primary {
+            background: linear-gradient(45deg, #007bff 0%, #00e1ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-content h2 {
+            color: #6c757d;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            margin-top: 2rem;
+        }
+
+        .hero-buttons .btn {
+            padding: 0.8rem 2rem;
+            font-weight: 500;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #007bff 0%, #00e1ff 100%);
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,123,255,0.2);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,123,255,0.3);
+        }
+
+        .btn-outline-dark {
+            border: 2px solid #2d3436;
+            color: #2d3436;
+        }
+
+        .btn-outline-dark:hover {
+            background: #2d3436;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            transform: rotate(-5deg);
+        }
+
+        .profile-img:hover {
+            transform: rotate(0deg) scale(1.02);
+        }
+
+        @media (max-width: 1200px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            .profile-img {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-section {
+                padding: 100px 0 40px;
+                text-align: center;
+            }
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                margin: 0 auto 2rem;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .profile-img {
+                width: 300px;
+                height: 300px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0 30px;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content h2 {
+                font-size: 1.2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .profile-img {
+                width: 250px;
+                height: 250px;
+            }
+            .hero-buttons .btn {
+                padding: 0.6rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 60px 0 20px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 1rem !important;
+            }
+            .hero-buttons .btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-image img {
+                width: 350px !important;
+                height: 350px !important;
+            }
+        }
+        
+        .top-bar {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+        }
+        
+        .navbar-brand {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: translateY(-2px);
+        }
+
+        .brand-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 2.2rem;
+            font-weight: 900;
+            line-height: 1.2;
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        .brand-name .text-primary {
+            color: #00a8ff !important;
+            text-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
+        }
+
+        .brand-title {
+            font-size: 0.85rem;
+            color: #00a8ff;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-top: -2px;
+            opacity: 0.9;
+        }
+
+        .navbar-brand:hover .brand-name {
+            transform: scale(1.02);
+        }
+
+        .navbar-brand:hover .brand-title {
+            opacity: 1;
+        }
+
+        @media (max-width: 991px) {
+            .brand-name {
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+            }
+            .brand-title {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+        }
+        
+        .nav-link {
+            position: relative;
+            padding: 0.7rem 1.2rem !important;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #007bff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 70%;
+        }
+        
+        .dropdown-menu-dark {
+            background: #2d3238;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .dropdown-item {
+            padding: 0.7rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-item:hover {
+            transform: translateX(5px);
+            background: #3a4047;
+        }
+        
+        @media (max-width: 991px) {
+            .navbar-brand {
+                font-size: 1.5rem;
+            }
+            
+            .nav-link::after {
+                display: none;
+            }
+        }
+
+        .profile-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+            background-size: cover;
+        }
+
+        .profile-img:hover {
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 280px;
+                height: 280px;
+            }
+        }
+
+        /* Media Queries for Different Screen Sizes */
+        @media (max-width: 1200px) {
+            .profile-img {
+                width: 350px;
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .profile-img {
+                width: 300px;
+                height: 300px;
+                margin-top: 30px;
+            }
+            .hero-content {
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 250px;
+                height: 250px;
+                margin-top: 20px;
+                border-width: 3px;
+            }
+            .section-padding {
+                padding: 60px 0;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                margin-top: 15px;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+            }
+            .hero-content {
+                padding: 10px;
+            }
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+            .section-padding {
+                padding: 40px 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .profile-img {
+                width: 180px;
+                height: 180px;
+                border-width: 2px;
+            }
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .section-bg {
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            color: #2d3436;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .section-divider {
+            width: 80px;
+            height: 3px;
+            background: #007bff;
+            margin: 0 auto 40px;
+        }
+        
+        .about-content {
+            padding: 20px;
+        }
+        
+        .about-content h3 {
+            color: #2d3436;
+            font-weight: 600;
+        }
+        
+        .key-points {
+            margin: 25px 0;
+        }
+        
+        .point-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .point-item i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+        
+        .about-box {
+            background: white;
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        
+        .about-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .about-box i {
+            color: #007bff;
+        }
+        
+        .about-box h4 {
+            font-size: 1.2rem;
+            color: #2d3436;
+            margin-bottom: 10px;
+        }
+        
+        .about-box p {
+            font-size: 0.9rem;
+            color: #636e72;
+            margin-bottom: 0;
+        }
+        
+        .about-buttons {
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .about-box {
+                padding: 15px !important;
+            }
+            
+            .about-box h4 {
+                font-size: 1rem;
+            }
+            
+            .about-box p {
+                font-size: 0.8rem;
+            }
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .skill-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #007bff;
+            margin-bottom: 15px;
+        }
+
+        .skill-header h4 {
+            color: #2d3436;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .skill-body {
+            padding: 10px 0;
+        }
+
+        .skill-item {
+            margin-bottom: 20px;
+        }
+
+        .skill-item span {
+            display: block;
+            margin-bottom: 8px;
+            color: #636e72;
+            font-weight: 500;
+        }
+
+        .progress {
+            height: 8px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: linear-gradient(45deg, #007bff, #00e1ff);
+            transition: width 1s ease-in-out;
+        }
+
+        .skill-card:hover .progress-bar {
+            animation: progress-animation 1.5s ease-in-out;
+        }
+
+        @keyframes progress-animation {
+            0% {
+                width: 0%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skill-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .skill-icon {
+                font-size: 2rem;
+            }
+        }
+
+        .skills-container {
+            padding: 20px 0;
+        }
+
+        .hex-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .hex-item {
+            width: 200px;
+            height: 230px;
+            position: relative;
+            margin: 15px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hex-content {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .hex-content i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #007bff;
+            transition: all 0.3s ease;
+        }
+
+        .hex-content h4 {
+            font-size: 1.1rem;
+            color: #2d3436;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .skill-level {
+            font-size: 0.9rem;
+            color: #007bff;
+            font-weight: 500;
+        }
+
+        .hex-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .hex-item:hover .hex-content {
+            background: linear-gradient(145deg, #007bff, #0056b3);
+        }
+
+        .hex-item:hover .hex-content i,
+        .hex-item:hover .hex-content h4,
+        .hex-item:hover .hex-content .skill-level {
+            color: white;
+        }
+
+        .hex-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #007bff, #00e1ff);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: -1;
+        }
+
+        .hex-item:hover:before {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hex-item {
+                width: 150px;
+                height: 173px;
+                margin: 10px;
+            }
+
+            .hex-content i {
+                font-size: 2rem;
+            }
+
+            .hex-content h4 {
+                font-size: 1rem;
+            }
+
+            .skill-level {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hex-grid {
+                gap: 10px;
+            }
+
+            .hex-item {
+                width: 130px;
+                height: 150px;
+                margin: 5px;
+            }
+
+            .hex-content i {
+                font-size: 1.8rem;
+            }
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-item {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-image {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,123,255,0.9), rgba(0,225,255,0.9));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .tech-stack span {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            color: white;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            color: #2d3436;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .project-content p {
+            color: #636e72;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 25px;
+            color: #007bff;
+            background: rgba(0,123,255,0.1);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-btn i {
+            font-size: 1rem;
+        }
+
+        /* Hover Effects */
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-btn:hover {
+            background: #007bff;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .project-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .project-content p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="brand-content">
+                    <span class="brand-name"><span class="text-primary">AP</span> SOLUTIONS</span>
+                    <span class="brand-title">Innovation Through Technology</span>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <BR><BR>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 pe-lg-5">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-primary">Arbaj Panhalkar</span></h1>
+                        <h2 class="h3 mb-4">Full Stack Developer</h2>
+                        <p class="lead mb-4">Crafting innovative digital solutions with modern technologies</p>
+                        <div class="hero-buttons d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-paper-plane me-2"></i>Get In Touch
+                            </a>
+                            <a href="#projects" class="btn btn-outline-dark">
+                                <i class="fas fa-code me-2"></i>View My Work
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0">
+                    <div class="hero-image text-center">
+                        <img src="ARBAJ (2).jpeg" alt="Arbaj Panhalkar" class="profile-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 section-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="about-content">
+                        <h3 class="mb-3">MCA Graduate & Tech Enthusiast</h3>
+                        <p class="lead mb-4">I am a passionate MCA Graduate currently on a PhD Self-Study Journey. As a tech enthusiast driven by coding and continuous learning, I combine academic excellence with practical development skills.</p>
+                        <div class="key-points mb-4">
+                            <div class="point-item">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                                <span>MCA Graduate from DY Patil Technical Campus</span>
+                            </div>
+                            <div class="point-item">
+                                <i class="fas fa-briefcase text-primary"></i>
+                                <span>Currently at SURVE INFOTECH PRIVATE LIMITED</span>
+                            </div>
+                            <div class="point-item">
+                                <i class="fas fa-laptop-code text-primary"></i>
+                                <span>Full Stack Developer & Tech Enthusiast</span>
+                            </div>
+                            <div class="point-item">
+                                <i class="fas fa-book text-primary"></i>
+                                <span>Pursuing PhD Self-Study Journey</span>
+                            </div>
+                            <div class="point-item">
+                                <i class="fas fa-heart text-primary"></i>
+                                <span>Driven by coding & continuous learning</span>
+                            </div>
+                        </div>
+                        <div class="social-connections mb-4">
+                            <span class="text-muted"><i class="fas fa-users text-primary me-2"></i>614+ followers • 500+ connections</span>
+                        </div>
+                        <div class="about-buttons">
+                            <a href="Resume.html" class="btn btn-primary me-3">View Resume</a>
+                            <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <div class="about-box p-4 rounded">
+                                <i class="fas fa-code fa-2x mb-3 text-primary"></i>
+                                <h4>Web Development</h4>
+                                <p>Creating responsive and dynamic web applications using modern technologies</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="about-box p-4 rounded">
+                                <i class="fas fa-mobile-alt fa-2x mb-3 text-primary"></i>
+                                <h4>Responsive Design</h4>
+                                <p>Building mobile-first websites that work seamlessly across all devices</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="about-box p-4 rounded">
+                                <i class="fas fa-database fa-2x mb-3 text-primary"></i>
+                                <h4>Backend Development</h4>
+                                <p>Developing robust server-side solutions and database architectures</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="about-box p-4 rounded">
+                                <i class="fas fa-tools fa-2x mb-3 text-primary"></i>
+                                <h4>API Integration</h4>
+                                <p>Connecting and integrating various third-party services and APIs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">My Skills</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <div class="hex-grid">
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fas fa-code"></i>
+                            <h4>HTML5/CSS3</h4>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-js"></i>
+                            <h4>JavaScript</h4>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-php"></i>
+                            <h4>PHP</h4>
+                            <span class="skill-level">Expert</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fas fa-database"></i>
+                            <h4>MySQL</h4>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-aws"></i>
+                            <h4>AWS</h4>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-google"></i>
+                            <h4>Google Cloud</h4>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-bootstrap"></i>
+                            <h4>Bootstrap 5</h4>
+                            <span class="skill-level">Advanced</span>
+                        </div>
+                    </div>
+                    <div class="hex-item">
+                        <div class="hex-content">
+                            <i class="fab fa-docker"></i>
+                            <h4>Docker</h4>
+                            <span class="skill-level">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <!-- Featured Projects -->
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="ap-school.jpg" alt="AP School Management System">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>AP School Management</h3>
+                            <p>A comprehensive school management system with student, teacher, and administrative portals.</p>
+                            <div class="project-links">
+                                <a href="https://school.freesite.online/" class="project-btn">
+                                    <i class="fas fa-eye"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="exam-online.jpg" alt="Online Examination System">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>PHP</span>
+                                    <span>JavaScript</span>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Online Examination Portal</h3>
+                            <p>Secure online examination platform with real-time assessment and result generation.</p>
+                            <div class="project-links">
+                                <a href="" class="project-btn">
+                                    <i class="fas fa-eye"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="portfolio.jpg" alt="Engineering Portfolio">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Engineering Portfolio</h3>
+                            <p>Modern and responsive portfolio showcasing engineering projects and achievements.</p>
+                            <div class="project-links">
+                                <a href="https://arbajpanhalkar.github.io/Portfolio_Salim_parande/" class="project-btn">
+                                    <i class="fas fa-eye"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-item">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="gym.png" alt="Gym Management">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Gym Management System</h3>
+                            <p>A comprehensive system for managing gym operations and member tracking with advanced features.</p>
+                            <div class="project-links">
+                                <a href="#" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="codeleaing.jpg" alt="Code Learning">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Code Learning Platform</h3>
+                            <p>Interactive platform for learning programming languages with real-time code execution.</p>
+                            <div class="project-links">
+                                <a href="https://arbajpanhalkar.github.io/mywebsite/" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="onileshop.jpg" alt="Mobile Shop">
+                            <div class="project-overlay">
+                                <div class="tech-stack">
+                                    <span>Laravel</span>
+                                    <span>Vue.js</span>
+                                    <span>MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Online Mobile Shop</h3>
+                            <p>E-commerce platform for mobile phones and accessories with secure payment integration.</p>
+                            <div class="project-links">
+                                <a href="shop.html" class="project-btn">
+                                    <i class="fas fa-eye"></i>
+                                    View Project
+                                </a>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title">Get In Touch</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="contact-info text-center">
+                                <i class="fas fa-envelope fa-2x mb-3 text-primary"></i>
+                                <h5>Email</h5>
+                                <p>arbajpanhalkar19@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-info text-center">
+                                <i class="fas fa-phone fa-2x mb-3 text-primary"></i>
+                                <h5>Phone</h5>
+                                <p>+91 9370329224</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="contact-info text-center">
+                                <i class="fas fa-map-marker-alt fa-2x mb-3 text-primary"></i>
+                                <h5>Location</h5>
+                                <p>Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/arbaj.panhalkar.19" class="mx-2"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="https://www.linkedin.com/in/arbaj-panhalkar/" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://www.instagram.com/arbaj.s.p/" class="mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 Arbaj Panhalkar. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
